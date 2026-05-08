@@ -1,0 +1,4 @@
+interface:
+  display_name: "Press Lab Critical Thinking"
+  short_description: "Structured six-hat AI discussion"
+  default_prompt: "導入六頂思考帽，協助我用白帽、紅帽、黃帽、黑帽、綠帽、藍帽來整理這個議題。"

@@ -8,6 +8,17 @@
 
 ---
 
+## 兩種用法
+
+這個 repo 現在同時支援兩種入口：
+
+- **一般 AI 使用者**：複製 [`PROMPT.md`](./PROMPT.md)，貼到 ChatGPT、Claude、Gemini 或其他 AI 對話框。
+- **Codex 使用者**：使用 [`SKILL.md`](./SKILL.md) 作為可安裝 skill，並搭配 [`agents/openai.yaml`](./agents/openai.yaml) 顯示 metadata。
+
+`PROMPT.md` 保留原本「整份貼上就能用」的協議版本。`SKILL.md` 則是整理成 Codex 能自動辨識與觸發的技能格式。
+
+---
+
 ## 為什麼有這個專案
 
 跟 AI 討論複雜議題時，你大概遇過這些狀況：
@@ -38,15 +49,28 @@
 
 ---
 
-## 怎麼用（30 秒上手）
+## 一般 AI 怎麼用（30 秒上手）
 
-1. 打開 [SKILL.md](./SKILL.md)
+1. 打開 [`PROMPT.md`](./PROMPT.md)
 2. 全選複製
 3. 貼到 AI 對話框（ChatGPT、Claude、Gemini 都可以）
 4. 在貼上的內容下面加一句：「**導入這個 skill**」
 5. 開始討論
 
 之後 AI 會主動偵測討論時機、提示換帽、限制自己不要亂下結論。
+
+---
+
+## Codex 怎麼用
+
+Codex 使用 [`SKILL.md`](./SKILL.md)。這個檔案包含 Codex skill 必要的 YAML frontmatter：
+
+```yaml
+name: press-lab-critical-thinking
+description: ...
+```
+
+安裝到 Codex skills 目錄後，當你說「導入六頂思考帽」、「戴帽子」、「我紅帽」、「藍帽一下」等指令時，Codex 可以自動載入這套協議。
 
 ---
 
@@ -61,7 +85,7 @@
 | 🟢 綠 | 發想新可能 |
 | 🔵 藍 | 管理討論流程 |
 
-詳細用法、為什麼這樣設計、AI 該遵守什麼規則，全部寫在 [SKILL.md](./SKILL.md)。
+詳細用法、為什麼這樣設計、AI 該遵守什麼規則，請看 [`PROMPT.md`](./PROMPT.md)。Codex 可安裝版本請看 [`SKILL.md`](./SKILL.md)。
 
 ---
 
